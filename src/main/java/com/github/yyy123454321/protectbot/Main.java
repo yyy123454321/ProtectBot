@@ -26,10 +26,12 @@ import org.javacord.api.entity.intent.Intent;
 public class Main extends Thread {
     public static DiscordApi api;
     public static Server protectServer;
-    public static Long protectServerId = 866940300534218773L;
+    //익명으로 할 서버 id
+    public static Long protectServerId = 0L;
     public static List<Webhook> protectServerWebhooks;
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        String token =                                                                                                                                                                                 "ODY2OTUxODAxMDY0NzgzOTA0.YPaByA.Fce5R9VRThQ6-u091sAJxM68nsI";
+        //봇 토큰
+        String token = "";
         api = new DiscordApiBuilder().setToken(token)
                 .setIntents(Intent.GUILDS,
                         Intent.GUILD_MEMBERS,
